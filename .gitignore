@@ -1,0 +1,12 @@
+# --- never commit these ---
+.env
+session/
+*.session
+*.session-journal
+tdigest.db
+
+# --- python ---
+__pycache__/
+*.pyc
+.venv/
+venv/

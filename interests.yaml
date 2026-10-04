@@ -1,0 +1,31 @@
+# Your interests are defined here — edit freely, then run: python main.py topics
+# Matching logic: exclude > keywords (instant match) > AI semantic score >= threshold.
+
+settings:
+  keyword_score: 1.0     # keyword hit = guaranteed inclusion; AI skipped for that post
+  threshold: 0.35        # default AI similarity threshold (0 = match everything, 1 = identical)
+
+topics:
+  - name: 🤖 AI & Machine Learning
+    description: News, research, tools and discussions about artificial intelligence, machine learning, LLMs, ChatGPT/Claude/Gemini, and neural networks.
+    keywords: ["ai", "machine learning", "llm", "gpt", "chatgpt", "claude", "openai", "gemini", "neural network", "deep learning"]
+    exclude: ["onlyfans"]
+
+  - name: 💻 Programming & Dev Tools
+    description: Software development, new frameworks and libraries, developer tools, tutorials, open source releases and coding tips.
+    keywords: ["python", "javascript", "typescript", "github", "open source", "api", "docker", "linux", "vscode", "git"]
+    threshold: 0.34
+
+  - name: 🇪🇹 Ethiopia & Africa Tech
+    description: News about Ethiopia, Addis Ababa, East Africa, Ethiopian startups, telecom and the African tech ecosystem.
+    keywords: ["ethiopia", "addis ababa", "habesha", "ethio telecom", "safaricom ethiopia", "africa tech", "ethiopian"]
+
+  - name: 💰 Deals, Freebies & Courses
+    description: Discounts, free courses, coupons, giveaways, limited-time offers and paid apps gone free.
+    keywords: ["free", "100% off", "discount", "coupon", "giveaway", "udemy", "deal"]
+    exclude: ["bet", "betting", "casino", "gambling", "1xbet"]
+
+  - name: 📰 Big Tech & World News
+    description: Major world events and big technology announcements from major companies that are worth knowing about.
+    keywords: ["breaking", "announces", "launches", "acquires", "released"]
+    threshold: 0.38
